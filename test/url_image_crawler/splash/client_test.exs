@@ -1,4 +1,4 @@
-defmodule UrlImageCrawler.SplashClientTest do
+defmodule UrlImageCrawler.Splash.ClientTest do
   use ExUnit.Case
 
   setup_all do
@@ -19,7 +19,7 @@ defmodule UrlImageCrawler.SplashClientTest do
         Plug.Conn.resp(conn, 200, "body")
       end)
 
-      assert {:ok, "body"} = UrlImageCrawler.SplashClient.get(url)
+      assert {:ok, "body"} = UrlImageCrawler.Splash.Client.get(url)
     end
   end
 

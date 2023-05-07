@@ -1,5 +1,5 @@
-defmodule UrlImageCrawler.SplashClient do
-  @behaviour UrlImageCrawler.SplashClient.Api
+defmodule UrlImageCrawler.Splash.Client do
+  @behaviour UrlImageCrawler.Splash.Api
 
   @impl true
   def get(url) do
