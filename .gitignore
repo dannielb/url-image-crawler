@@ -24,3 +24,5 @@ url_image_crawler-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+./url_image_crawler
