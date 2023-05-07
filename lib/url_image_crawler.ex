@@ -1,18 +1,5 @@
 defmodule UrlImageCrawler do
   @moduledoc """
-  Documentation for `UrlImageCrawler`.
+  UrlImageCrawler is a web scraping tool that allows you to extract links and images from web pages.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> UrlImageCrawler.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end
