@@ -1,6 +1,7 @@
 defmodule UrlImageCrawler.Splash do
   @moduledoc """
-  Splash handling module.
+  Splash handling module. Splash is a powerful JavaScript rendering service that
+  allows us to extract data from dynamic websites.
   """
 
   @doc """
