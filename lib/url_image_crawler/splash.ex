@@ -26,6 +26,7 @@ defmodule UrlImageCrawler.Splash do
       {:ok, {parse_links(document), parse_images(document)}}
     else
       {:error, %Mint.TransportError{reason: :econnrefused}} -> {:error, :connection_refused}
+      err -> err
     end
   end
 

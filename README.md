@@ -4,7 +4,7 @@ UrlImageCrawler is a web scraping tool that allows you to extract links and imag
 
 ## Installation
 
-To get started, make sure you have [Docker](https://www.docker.com/), [Elixir](https://elixir-lang.org/) and
+To get started, make sure you have [Docker](https://www.docker.com/), [Docker-Compose](https://docs.docker.com/compose/), [Elixir](https://elixir-lang.org/) and
 [Erlang](https://www.erlang.org/) installed.
 
 In the root directory:
@@ -18,7 +18,7 @@ In the root directory:
 This application uses [Splash](https://splash.readthedocs.io/en/stable/). Splash is a powerful JavaScript rendering service that allows us to extract data from dynamic websites. Many websites today rely on complex client-side JavaScript to render their content, which can make it difficult to scrape data using traditional HTTP requests. By using Splash, we're able to simulate a browser and execute JavaScript on the page, allowing us to extract data that would otherwise be difficult or impossible to obtain. Splash's lightweight design and HTTP API make it a great choice for integrating with our app.
 
 #### Exported functions
-This project exports a function called `Splash.fetch/1`, that makes it possible to get all the images and links from a web page, but it can also be used as a command line, by building the project:
+This project exports a function called `UrlImageCrawler.Splash.fetch/1`, that makes it possible to get all the images and links from a web page, but it can also be used as a command line, by building the project:
 
 #### Building
 To build the application as a command line app, in the project`s root directory: 
