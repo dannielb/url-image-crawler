@@ -9,18 +9,18 @@ defmodule UrlImageCrawler.SplashTest do
 
     @success_html_response ~s(
       <html>
-      <body>
-        <h1> links! </h1>
-        <a href="http://example.com">example.com</a>
-        <a href="http://example.com/1">example.com/1</a>
-        <a href="http://example.com/2">example.com/2</a>
+        <body>
+          <h1> links! </h1>
+          <a href="http://example.com">example.com</a>
+          <a href="http://example.com/1">example.com/1</a>
+          <a href="http://example.com/2">example.com/2</a>
 
-        <h1> images! </h1>
-        <img src="http://example.com/1.png" />
-        <img src="http://example.com/2.png" />
-        <img src="http://example.com/3.png" />
-      </body>
-    </html>
+          <h1> images! </h1>
+          <img src="http://example.com/1.png" />
+          <img src="http://example.com/2.png" />
+          <img src="http://example.com/3.png" />
+        </body>
+      </html>
     )
 
     test "success: returns a ok tuple with the images and link list" do

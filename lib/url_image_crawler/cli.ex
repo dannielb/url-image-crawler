@@ -13,10 +13,10 @@ defmodule UrlImageCrawler.CLI do
   alias UrlImageCrawler.Splash
 
   def main([url]) when is_binary(url) do
-    with {:ok, {link, images}} <- Splash.fetch(url) do
-      response(link, images)
-    else
+    case Splash.fetch(url) do
+      {:ok, {link, images}} -> response(link, images)
       {:error, :connection_refused} -> IO.puts("Failed to reach Splash server")
+      err -> IO.puts("Failed to fetch URL: #{inspect(err)}")
     end
   end
 

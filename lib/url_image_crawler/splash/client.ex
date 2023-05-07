@@ -1,4 +1,7 @@
 defmodule UrlImageCrawler.Splash.Client do
+  @moduledoc """
+  Splash API client implementation, for more information visit: https://splash.readthedocs.io/en/stable/index.html.
+  """
   @behaviour UrlImageCrawler.Splash.Api
 
   @impl true
@@ -13,5 +16,5 @@ defmodule UrlImageCrawler.Splash.Client do
     [url: url, wait: 5.5, render_all: 1]
   end
 
-  defp client(), do: Req.new(base_url: Application.fetch_env!(:url_image_crawler, :splash_url))
+  defp client, do: Req.new(base_url: Application.fetch_env!(:url_image_crawler, :splash_url))
 end

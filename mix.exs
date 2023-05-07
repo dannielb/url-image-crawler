@@ -30,7 +30,8 @@ defmodule UrlImageCrawler.MixProject do
       {:req, "~> 0.3.6"},
       {:floki, "~> 0.34.2"},
       {:mox, "~> 1.0.0", only: :test},
-      {:bypass, "~> 2.1", only: :test}
+      {:bypass, "~> 2.1", only: :test},
+      {:credo, "~> 1.7", only: :dev}
     ]
   end
 

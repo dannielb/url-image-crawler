@@ -1,6 +1,8 @@
 defmodule UrlImageCrawler.Splash.ClientTest do
   use ExUnit.Case
 
+  alias UrlImageCrawler.Splash.Client
+
   setup_all do
     {:ok, bypass: Bypass.open()}
   end
@@ -19,7 +21,7 @@ defmodule UrlImageCrawler.Splash.ClientTest do
         Plug.Conn.resp(conn, 200, "body")
       end)
 
-      assert {:ok, "body"} = UrlImageCrawler.Splash.Client.get(url)
+      assert {:ok, "body"} = Client.get(url)
     end
   end
 
