@@ -17,12 +17,12 @@ In the root directory:
 #### Splash
 This application uses [Splash](https://splash.readthedocs.io/en/stable/). Splash is a powerful JavaScript rendering service that allows us to extract data from dynamic websites. Many websites today rely on complex client-side JavaScript to render their content, which can make it difficult to scrape data using traditional HTTP requests. By using Splash, we're able to simulate a browser and execute JavaScript on the page, allowing us to extract data that would otherwise be difficult or impossible to obtain. Splash's lightweight design and HTTP API make it a great choice for integrating with our app.
 
-### Exported functions
-This project exports a function called `Splash.fetch/1`, that makes possible to get all the images and links from a web page, but it can also be used as a command line, by building the project:
+#### Exported functions
+This project exports a function called `Splash.fetch/1`, that makes it possible to get all the images and links from a web page, but it can also be used as a command line, by building the project:
 
 #### Building
 To build the application as a command line app, in the project`s root directory: 
-- use `mix escript.build`. This will create a binary named `url_image_crawler`, which can be ran on any system with an Erlang VM.
+- use `mix escript.build`. This will create a binary named `url_image_crawler`, which can be run on any system with an Erlang VM.
 - for example: `./url_image_crawler https://uplearn.co.uk/`
 
 ## Testing
@@ -31,8 +31,10 @@ In order to run automated tests, use `mix test`.
 
 ## Improvement points
 > some improvements that can be done with more time.
+
 - Add Elixir in the docker-compose.yml, making all the project runnable via Docker.
-- Add validation checks to ensure that all returned images and links are valid
+- Add validation checks to ensure that all returned images and links are valid.
+- Add edge case tests to the [splash_test](https://github.com/dannielb/url-image-crawler/blob/main/test/url_image_crawler/splash_test.exs) and [client_test](https://github.com/dannielb/url-image-crawler/blob/main/test/url_image_crawler/splash/client_test.exs) modules.
 - The current Splash rendering configurations may not be the best fit for all projects. Depending on the specific use case, It may need to adjust the configurations for optimal performance, These are the current configuration:
   - `wait`: waits at least 5.5 seconds to get the pages results
-  - `render_all`: extend the viewport to include the whole webpage (possibly very tall) before rendering
+  - `render_all`: extend the viewport to include the whole webpage (possibly very tall) before rendering.
